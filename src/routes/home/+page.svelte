@@ -29,9 +29,7 @@
 			if (slideHero) {
 				slideHero(val);
 			}
-			// if (slideAbout) {
-			// 	slideAbout(val);
-			// }
+
 		};
 		access_token.set(data.accessToken);
 	});
