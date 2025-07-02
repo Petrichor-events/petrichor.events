@@ -119,7 +119,7 @@ export const headerLinks: Array<HeaderLink> = [
         show: false
     },
     {
-        url: '/login?to=map',
+        url: '/map',
         linkText: 'Maps',
         childLinks: [],
         show: false
