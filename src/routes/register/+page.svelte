@@ -135,8 +135,15 @@
   align-items: center;
   justify-content: flex-start; 
   overflow-y: auto; 
-  background: linear-gradient(170deg, #01E8FA -5%, #000910 35%);
-  padding-top: 10rem; 
+	  background: radial-gradient(
+		80% 70% at 50% 0%,
+		#039FF1 0%,
+		#074F88 20%,
+		#005698 35%,
+		#001423 67%,
+		#000910 80%,
+		#000000 100%
+	  );  padding-top: 10rem; 
   box-sizing: border-box;
 }
 
@@ -164,8 +171,22 @@
     color: #fff;
     animation: fadeIn 0.5s ease-out;
     margin-bottom: 2rem;
+    animation: flicker 2s infinite ease-in-out;
 
   }
+
+  	@keyframes flicker {
+	  0%, 100% {
+		box-shadow: 0 0 15px rgba(0, 191, 255, 0.3),
+					0 0 30px rgba(0, 191, 255, 0.2),
+					0 0 45px rgba(0, 191, 255, 0.1);
+	  }
+	  50% {
+		box-shadow: 0 0 10px rgba(0, 191, 255, 0.1),
+					0 0 20px rgba(0, 191, 255, 0.05),
+					0 0 30px rgba(0, 191, 255, 0.03);
+	  }
+	}
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }

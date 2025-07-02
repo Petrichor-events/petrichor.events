@@ -82,12 +82,25 @@
     font-family: 'Inter', sans-serif;
     color: #fff;
     animation: fadeIn 0.5s ease-out;
+    	  animation: flicker 2s infinite ease-in-out;
+
   }
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
   }
-
+	@keyframes flicker {
+	  0%, 100% {
+		box-shadow: 0 0 15px rgba(0, 191, 255, 0.3),
+					0 0 30px rgba(0, 191, 255, 0.2),
+					0 0 45px rgba(0, 191, 255, 0.1);
+	  }
+	  50% {
+		box-shadow: 0 0 10px rgba(0, 191, 255, 0.1),
+					0 0 20px rgba(0, 191, 255, 0.05),
+					0 0 30px rgba(0, 191, 255, 0.03);
+	  }
+	}
   h2 {
     font-family: 'Inria Sans', sans-serif;
     font-weight: 700;
