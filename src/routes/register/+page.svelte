@@ -126,16 +126,19 @@
 
 <style>
   /* gradient background */
-  .page-bg {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background: linear-gradient(170deg, #01E8FA -5%, #000910 35%);
-  }
+.page-bg {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: flex-start; 
+  overflow-y: auto; 
+  background: linear-gradient(170deg, #01E8FA -5%, #000910 35%);
+  padding-top: 10rem; 
+  box-sizing: border-box;
+}
 
   .page-heading {
     position: absolute;
@@ -160,8 +163,8 @@
     font-family: 'Inter', sans-serif;
     color: #fff;
     animation: fadeIn 0.5s ease-out;
-    max-height: calc(100vh - 10rem);
-    overflow-y: auto;
+    margin-bottom: 2rem;
+
   }
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
