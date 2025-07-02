@@ -5,23 +5,24 @@ const frontendRoutes = [
 	'/',
 	'/home',
 	'/aboutus',
+	// '/contactus',
 	'/login',
 	'/register',
 	'/changepassword',
 	'/forgotpassword',
 	'/ca/welcome',
 	'/ca/profile',
-	'/error',
+	'/comingsoon',
 	'/profile',
-	// '/events',
-	'/contactus',
 ];
 const UnderConstructionRoutes = [
+	'/contactus',
 	'/events',
 	'/workshop',
 	'/schedule',
 	'/merch',
-	'/sponsors'
+	'/sponsors',
+	'/map'
 ];
 
 
@@ -32,16 +33,18 @@ export const handle: Handle = ({ event, resolve }) => {
 	const isAllowed = frontendRoutes.some(route =>
 		path === route || path.startsWith(route + '/')
 	);
-  if (isAllowed) {
-		return resolve(event);
-	}
-  const isUnderConstruction = UnderConstructionRoutes.some(route =>
+	const isUnderConstruction = UnderConstructionRoutes.some(route =>
 		path === route || path.startsWith(route + '/')
 	);
-  if (isUnderConstruction) {
-		const errorUrl = new URL("/error", event.url)
-		return Response.redirect(errorUrl, 302);
-  }
+
+	if (isAllowed) {
+			return resolve(event);
+	}
+  
+	if (isUnderConstruction) {
+			const errorUrl = new URL("/comingsoon", event.url)
+			return Response.redirect(errorUrl, 302);
+	}
 
 	throw error(404, 'Page not found');
 };

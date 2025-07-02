@@ -1,30 +1,15 @@
-<script>
-    import Strip from "$lib/components/Strip.svelte";
-</script>
-
 <main>
     <div>
-        <h1>Coming Soon!</h1>
-        <h1>Coming Soon!</h1>
-        <h1>Coming Soon!</h1>
-        <h1>Coming Soon!</h1>
-        <h1>Coming Soon!</h1>
-        <h1>Coming Soon!</h1>
-        <h1>Coming Soon!</h1>
-        <h1>Coming Soon!</h1>
-        <h1>Coming Soon!</h1>
-        <h1>Coming Soon!</h1>
+        {#each Array(12) as _}
+            <h1>Coming Soon!</h1>
+        {/each} 
     </div>
 </main>
-
-<Strip />
-
-
 <style>
     main{
         display: grid;
         place-items: center;
-        height: 85vh;
+        height: 100vh;
         font-size: 30px;
     }
     h1{

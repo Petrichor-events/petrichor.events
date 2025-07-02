@@ -24,7 +24,7 @@
 </div>
 
 <main>
-  <h1 class="atmos">Workshop</h1>
+  <h1 class="atmos">Workshops</h1>
   <div class="container">
     {#if Object.entries(workshops).length != -1} 
     <!-- CHANGE IT LATER ON THIS IS ONLY FOR NOW SO THAT WE GET COMING SOON -->
