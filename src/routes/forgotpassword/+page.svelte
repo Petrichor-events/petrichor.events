@@ -117,7 +117,7 @@
     width: 100%;
     padding: 1rem;
     margin-bottom: 1.25rem;
-    background: #40413e;
+    background: #334155;
     border: none;
     border-radius: 1rem;
     color: #fff;
@@ -133,18 +133,27 @@
   #login {
     flex: none;
     padding: 1rem 2rem;
-    background: linear-gradient(99deg, #00121F, #06BAF1);
+    background: linear-gradient(to right, #1e40af, #38bdf8);
     border: none;
     border-radius: 1rem;
     color: #fff;
     font-weight: 600;
     cursor: pointer;
   }
+  
+  #login:hover {
+    background: linear-gradient(to right, #1d4ed8, #0ea5e9);
+  }
+
   #register {
     align-self: center;
-    color: #a78bfa;
+    color: #60a5fa;
     text-decoration: none;
     font-weight: 500;
+  }
+
+  #register:hover {
+    text-decoration: underline;
   }
 
   .success {
@@ -166,7 +175,7 @@
 
 <div class="page-bg">
   <div class="form-box">
-    <h2>Forgot <span style="color:#910cea">Password?</span></h2>
+    <h2>Forgot <span class="text-blue-700">Password?</span></h2>
     <p class="subtitle">
       Enter your email and we'll send a mail for resetting the password.
     </p>
@@ -182,13 +191,13 @@
         type="email"
         name="email"
         id="email"
-        placeholder="Email address"
+        placeholder="name@company.com"
         required
       />
 
       <div class="buttons">
         <button id="login" type="submit">Submit</button>
-        <a id="register" href="/login" on:click={handleLogin}>← Back to Login</a>
+        <a id="register" href="/login" on:click={handleLogin}>Back to Login</a>
       </div>
     </form>
   </div>

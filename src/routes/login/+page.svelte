@@ -95,7 +95,7 @@
 <main>
   <div class="container">
     <div class="login">
-      <h2><strong>Sign in to your account</strong></h2>
+      <h2>Sign in to your account</h2>
       <form method="POST" action="?/login" use:enhance={loginResult}>
 
 	<label class="label"><p>Email</p>
@@ -163,7 +163,7 @@
 	  max-width: 700px;
 	  min-height: 420px;
 	  border-radius: 1rem;
-	  background-color: #1e293b;
+	  background-color: transparent;
 	  border: 1px solid #06b6d4; /* border-cyan-600 */
 	  padding: 2.5rem;
 	  color: white;
@@ -201,9 +201,10 @@
 	
 	.login h2 {
 	  font-size: 1.5rem;
-	  font-weight: 600;
-	  margin-bottom: 2rem;
+	  font-weight: 550;
+	  margin-bottom: 1rem;
 	  color: white;
+	  font-family: 'Inria Sans', sans-serif;
 	}
 	
 	.label {

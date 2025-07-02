@@ -148,14 +148,16 @@
 }
 
   .page-heading {
-    position: absolute;
-    top: 7rem;
-    left: 3rem;
+    /* position: absolute; */
+    /* top: 7rem;
+    left: 3rem; */
     font-family: 'Inria Sans', sans-serif;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+    /* text-align: center; */
     color: white;
     font-weight: 700;
-    z-index: 2;
+    /* z-index: 2; */
   }
 
   /* container */
@@ -203,7 +205,7 @@
   }
   input, select {
     padding: 1rem;
-    background: #40413e;
+    background: #334155;
     border: none;
     border-radius: 1rem;
     color: #fff;
@@ -225,18 +227,26 @@
   .btn-primary {
     flex: 1;
     padding: 1rem;
-    background: linear-gradient(99deg, #00121F, #06BAF1);
+    background: linear-gradient(to right, #1e40af, #38bdf8);
     border: none;
-    border-radius: 1rem;
+    border-radius: 0.7rem;
     color: #fff;
     font-weight: 600;
     cursor: pointer;
   }
+  .btn-primary:hover {
+	  background: linear-gradient(to right, #1d4ed8, #0ea5e9);
+	}
+  
   .btn-link {
     align-self: center;
-    color: #a78bfa;
+    color: #60a5fa;
     text-decoration: none;
     font-weight: 500;
+  }
+
+  .btn-link:hover {
+    text-decoration: underline;
   }
 
   @media (max-width: 768px) {
@@ -245,9 +255,9 @@
 </style>
 
 <div class="page-bg">
-  <h1 class="page-heading">Let's get started</h1>
 
   <div class="form-box">
+    <h1 class="page-heading">Let's get started!</h1>
     <form
       action="?/register"
       method="POST"
@@ -259,7 +269,7 @@
         <label for="username">Name</label>
         <input
           type="text" name="username" id="username"
-          placeholder="Name" maxlength="25"
+          placeholder="John Doe" maxlength="25"
           required bind:value={username}
         />
         {#if warn_name}
@@ -272,7 +282,7 @@
         <label for="phone">Phone Number</label>
         <input
           type="tel" name="phone" id="phone"
-          placeholder="Phone Number" maxlength="10"
+          placeholder="1234567890" maxlength="10"
           required bind:value={phone}
         />
         {#if warn_phone}
@@ -357,7 +367,7 @@
         <label for="email">Email</label>
         <input
           type="email" name="email" id="email"
-          placeholder="Email ID" required bind:value={email}
+          placeholder="name@company.com" required bind:value={email}
         />
         {#if warn_email}
           <div class="warn">{warn_email}</div>
@@ -369,7 +379,7 @@
         <label for="password">Password</label>
         <input
           type="password" name="password" id="password"
-          placeholder="Password" required bind:value={password}
+          placeholder="••••••••" required bind:value={password}
         />
         {#if warn_password}
           <div class="warn">{warn_password}</div>
